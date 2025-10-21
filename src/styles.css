@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #000;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 760px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Navigation */
+.navigation {
+    position: absolute;
+    top: 62px;
+    left: 323px;
+    right: 310px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    gap: 34px;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+}
+
+.menu-btn:hover {
+    opacity: 0.8;
+}
+
+.submenu {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffcc00;
+    border-radius: 6px;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 11px;
+    min-width: 98px;
+    text-align: center;
+}
+
+.submenu div {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+    line-height: 1.5;
+}
+
+.menu-item:hover .submenu {
+    display: flex;
+}
+
+/* Hero Content */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 67.7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 81px;
+    z-index: 5;
+}
+
+.hero-subtitle {
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 72px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: normal;
+}
+
+.cta-button {
+    background: #ffcc00;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    width: 187px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+}
+
+.slide-indicators {
+    display: flex;
+    gap: 46px;
+    align-items: center;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: #d9d9d9;
+    cursor: pointer;
+}
+
+.indicator.active {
+    width: 40px;
+    background: #ffcc00;
+}
+
+/* About Section */
+.about-section {
+    padding: 100px 310px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0;
+}
+
+.section-header p {
+    font-size: 16px;
+    color: #555555;
+    line-height: normal;
+    margin-top: 0;
+}
+
+.profile-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.profile-card {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 0 20px;
+}
+
+.profile-icon {
+    width: 130px;
+    height: 130px;
+    background: #ffcc00;
+    border-radius: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.profile-icon svg {
+    width: 44px;
+    height: 44px;
+}
+
+.profile-card h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    margin: 25px 0 0 0;
+    text-align: center;
+}
+
+.profile-card p {
+    font-size: 16px;
+    color: #555555;
+    text-align: center;
+    line-height: normal;
+    max-height: 63px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    background: rgba(255, 204, 0, 0.1);
+    padding: 100px 310px;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.portfolio-item {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0 20px;
+}
+
+.portfolio-item img {
+    width: 420px;
+    height: 420px;
+    object-fit: cover;
+    background: #ffcc00;
+}
+
+.portfolio-item h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    margin: 25px 0 0 0;
+}
+
+.portfolio-item p {
+    font-size: 16px;
+    color: #555555;
+    text-align: center;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Contact Section */
+.contact-section {
+    background: #000;
+    padding: 100px 0;
+}
+
+.contact-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.contact-section .section-header {
+    margin-bottom: 75px;
+}
+
+.contact-section .section-header h2 {
+    color: #fff;
+}
+
+.contact-section .section-header p {
+    color: #fff;
+}
+
+.contact-content {
+    display: flex;
+    gap: 44px;
+    align-items: flex-start;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: #fff;
+    border: none;
+    padding: 20px 21px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #000;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #000;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    background: #ffcc00;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.contact-form button:hover {
+    opacity: 0.9;
+}
+
+.map-container {
+    width: 460px;
+    height: 435px;
+    overflow: hidden;
+}
+
+.map-container img {
+    width: 894px;
+    height: 657px;
+    margin-left: -265px;
+    margin-top: -81.5px;
+    object-fit: cover;
+}
+
+/* Footer */
+.footer {
+    background: #fff;
+    padding: 20px 310px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.footer-copyright {
+    font-size: 16px;
+    color: #000;
+}
+
+.footer-social {
+    display: flex;
+    gap: 51px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-icon {
+    display: block;
+    width: 45px;
+    height: 45px;
+}
+
+.social-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-policy {
+    font-size: 14.4px;
+    color: #212529;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Responsive */
+@media (max-width: 1600px) {
+    .navigation {
+        left: 50px;
+        right: 50px;
+    }
+    
+    .about-section,
+    .portfolio-section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .footer {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 48px;
+    }
+    
+    .hero-subtitle {
+        font-size: 24px;
+    }
+    
+    .portfolio-item {
+        width: calc(50% - 20px);
+    }
+    
+    .portfolio-item img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .logo {
+        font-size: 32px;
+    }
+    
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-content {
+        width: 90%;
+        gap: 40px;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .profile-cards {
+        flex-direction: column;
+    }
+    
+    .portfolio-item {
+        width: 100%;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .map-container {
+        width: 100%;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-social {
+        position: static;
+        transform: none;
+    }
+}
